@@ -1,21 +1,12 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
-var server = http.createServer(function (request, response) {
-  var path = '/index.html';
-console.log(path,123);
-  fs.readFile(__dirname + path, function (error, data) {
-    if (error) {
-      response.writeHead(404);
-      response.write(error);
-      response.end();
-    } else {
-      response.writeHead(200, {
-        'Content-Type': 'text/html'
-      });
-      response.write(data);
-      response.end();
-    }
-  });
+const express = require('express');
+const path = require('path');
+const port = process.env.PORT || 8080;
+const app = express();
+
+app.use(express.static(__dirname));
+app.get('*' , (req,res)=>{
+
+  res.sendFile(path.resolve(__dirname,'index.html'));
 });
-server.listen(3000);
+app.listen(port);
+console.log("server starting",__dirname);
