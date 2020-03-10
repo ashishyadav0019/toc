@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#415765">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0' name='viewport'/>
+
+    <meta charset="UTF-8">
+    <title>try slick</title>
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .your-class {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="your-class">
+    <div>
+        <div style="width: 100%; display: inline-block;">
+            <div style="
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px;
+">
+                <div id="plan1" style="
+    padding: 20px;
+    font-size: 28px;
+    background: grey;
+    color: white;
+    margin: 4px;
+"> plan 1
+                </div>
+                <div id="plan2" style="
+    padding: 20px;
+    font-size: 28px;
+        background: grey;
+        margin: 4px;
+    color: white;
+"> plan 2
+                </div>
+                <div id="plan3" style="
+    padding: 20px;
+    font-size: 28px;
+        background: grey;
+    color: white;
+    margin: 4px;
+"> plan 3
+                </div>
+                <div id="plan4" style="
+    padding: 20px;
+    font-size: 28px;
+        background: grey;
+        margin: 4px;
+    color: white;
+"> plan 4
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 100%;display: inline-block;">
+            <div class="back">
+                back
+            </div>
+            <div style="
+    margin: 20px;
+    height: 80vh;
+    background: grey;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+"> PLAN 1 PAGE
+            </div>
+
+            <div style="
+    text-align: center;
+    font-size: 20px;
+">Continue 1
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 100%;display: inline-block;">
+            <div class="back">
+                back
+            </div>
+            <div style="
+    margin: 20px;
+    height: 80vh;
+    background: grey;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+"> PLAN 2 PAGE
+            </div>
+
+            <div style="
+    text-align: center;
+    font-size: 20px;
+">Continue 2
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 100%;display: inline-block;">
+            <div class="back">
+                back
+            </div>
+            <div style="
+    margin: 20px;
+    height: 80vh;
+    background: grey;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+"> PLAN 3 PAGE
+            </div>
+
+            <div style="
+    text-align: center;
+    font-size: 20px;
+">Continue 3
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 100%;display: inline-block;">
+            <div class="back">
+                back
+            </div>
+
+            <div style="
+    margin: 20px;
+    height: 80vh;
+    background: grey;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+"> PLAN 4 PAGE
+            </div>
+
+            <div style="
+    text-align: center;
+    font-size: 20px;
+">Continue 4
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./assets/js/slick.js"></script>
+<script>
+
+
+  $(document).ready(function () {
+    var slider = $('.your-class');
+    slider.slick({
+      dots: false,
+      swipe: true,
+      touchMove: true,
+      infinite: false,
+      arrows: false,
+      speed: 500,
+    })
+    $('#plan1').click(function () {
+      slider[0].slick.slickGoTo(1);
+    })
+
+    $('#plan2').click(function () {
+      slider[0].slick.slickGoTo(2);
+    })
+
+    $('#plan3').click(function () {
+      slider[0].slick.slickGoTo(3);
+    })
+
+    $('#plan4').click(function () {
+      slider[0].slick.slickGoTo(4);
+    })
+
+    $('.back').click(function () {
+      slider[0].slick.slickGoTo(0);
+    })
+    // $( '#plan2' ).slickGoTo( 2 );
+    // $( '#plan3' ).slickGoTo( 3);
+    // $( '#plan4' ).slickGoTo( 4 );
+  });
+
+</script>
+</body>
+</html>
+
+<!--slidesToShow: 1.05,-->
+<!--slidesToScroll: 1,-->
+<!--centerMode: true,-->
+<!--centerPadding: '4px',-->
